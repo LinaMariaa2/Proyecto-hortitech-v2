@@ -1,12 +1,28 @@
 import { useState } from 'react'
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import PanelInvA from './vistas/administrador/PanelInvA'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      
+  	  <BrowserRouter>
+            <Routes>
+                <Route path='PanelInvA' element={<PanelInvA/>}>  
+                  <Route path="/PanelZona1" element={<PanelZonas />} />
+                  <Route path="/PanelZona2" element={<PanelZonas />} />
+                  <Route path="/PanelZona3" element={<PanelZonas />} />
+                  <Route path="/PanelZona4" element={<PanelZonas />} />
+                    
+                </Route>
+            
+                    
+               
+                
+
+            </Routes>
+        </BrowserRouter>
     </>
   )
 }
