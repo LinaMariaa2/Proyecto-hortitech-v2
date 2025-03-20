@@ -1,5 +1,7 @@
 import React from 'react';
 import Invernaderoi from '../../imagenes/Invernadero.jpg'; 
+import { Link } from 'react-router-dom';  
+
 function PanelZonas() {
   return ( 
     <>
@@ -81,7 +83,7 @@ function PanelZonas() {
         </div>
         <div className="flex justify-center mt-6 ">
           <button className="bg-green-500 text-white py-2 px-5 rounded-md w-1/2 hover:bg-green-600 absolute top-200">
-            Agregar Invernadero
+            Agregar Zona
           </button>
         </div>
         
@@ -91,4 +93,4 @@ function PanelZonas() {
   );
 }
 
-export default  PanelZonas;
+export default PanelZonas;
