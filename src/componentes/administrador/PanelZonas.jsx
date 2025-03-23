@@ -1,7 +1,7 @@
 import React from 'react';
 
 function PanelZonas() {
-  // Datos del invernadero (pueden venir de la base de datos o props)
+  // Datos del invernadero 
   const invernadero = {
     nombre: "Invernadero 1",
     descripcion: "Este invernadero se utiliza para el cultivo de flores.",
@@ -10,7 +10,7 @@ function PanelZonas() {
     responsable: "FRanco Garzon",
   };
 
-  // Datos de zonas (Ejemplo de datos, pueden venir de una API)
+  // Datos de zonas 
   const zonas = [
     { 
       id: 1, 

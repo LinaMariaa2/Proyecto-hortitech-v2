@@ -5,10 +5,10 @@ function PanelInvernadero() {
   return (
     <>
       <main className="bg-gray-100 min-h-screen flex flex-col items-center py-10">
-        {/* Título Principal */}
+        {/* Titulo Principal grande */}
         <h1 className="text-2xl font-bold text-gray-800 mb-6">Invernaderos</h1>
 
-        {/* Contenedor de Invernaderos en Grid */}
+        {/* Contenedor de Invernaderos aplicacion Grid  */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-6">
           {[1, 2, 3, 4].map((num) => (
             <div
