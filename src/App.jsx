@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import PanelInvA from '../../componentes/administrador/PanelInvA'
-import PanelZonas from './vistas/administrador/PanelZonasA'
+
 
 
 function App() {
@@ -9,7 +7,11 @@ function App() {
 
   return (
     <>
-  	  <BrowserRouter>
+    {/* 
+    import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import PanelInvA from '../../componentes/administrador/PanelInvA'
+import PanelZonas from './vistas/administrador/PanelZonasA'
+    <BrowserRouter>
             <Routes>
                 <Route path='PanelInvA' element={<PanelInvA/>}>  
                   <Route path="/PanelZona1" element={<PanelZonas />} />
@@ -24,7 +26,8 @@ function App() {
                 
 
             </Routes>
-        </BrowserRouter>
+        </BrowserRouter>  */}
+  	  
     </>
   )
 }

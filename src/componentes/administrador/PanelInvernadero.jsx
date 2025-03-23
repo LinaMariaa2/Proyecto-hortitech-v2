@@ -1,93 +1,45 @@
 import React from 'react';
-import Invernaderoi from '../../imagenes/Invernadero.jpg'; 
-import { Link } from 'react-router-dom';  
+import Invernaderoi from '../../imagenes/Invernadero.jpg';
 
 function PanelInvernadero() {
-  return ( 
+  return (
     <>
-      <header></header>
-      <main className="bg-gray-100">
-        <div className="space-x-10 flex justify-center items-center h-screen">
-          
+      <main className="bg-gray-100 min-h-screen flex flex-col items-center py-10">
+        {/* Título Principal */}
+        <h1 className="text-2xl font-bold text-gray-800 mb-6">Invernaderos</h1>
 
-          <div className="max-w-sm w-full bg-white rounded-lg shadow-lg">
-            <img 
-              src={Invernaderoi} 
-              alt="Invernadero" 
-              className="object-contain rounded-t-lg" 
-            />
-            <div className="p-6 text-center">
-              <Link 
-                to="/PanelZona1" 
-                className="inline-block bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700"
-              >
-                Invernadero 1
-              </Link>
+        {/* Contenedor de Invernaderos en Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-6">
+          {[1, 2, 3, 4].map((num) => (
+            <div
+              key={num}
+              className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all hover:scale-105"
+            >
+              <img
+                src={Invernaderoi}
+                alt={`Invernadero ${num}`}
+                className="w-full h-40 object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-gray-700 mb-2"> Invernadero {num}</h3>
+                <a
+                  href={`/PanelZona${num}`} 
+                  className="inline-block bg-green-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-green-700 transition"
+                >
+                  Ver Zonas
+                </a>
+              </div>
             </div>
-          </div>
-
-        
-          <div className="max-w-sm w-full bg-white rounded-lg shadow-lg">
-            <img 
-              src={Invernaderoi} 
-              alt="Invernadero" 
-              className="object-contain rounded-t-lg" 
-            />
-            <div className="p-6 text-center">
-              <Link 
-                to="/PanelZona2" 
-                className="inline-block bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700"
-              >
-                Invernadero 2
-              </Link>
-            </div>
-          </div>
-
-         
-          <div className="max-w-sm w-full bg-white rounded-lg shadow-lg">
-            <img 
-              src={Invernaderoi} 
-              alt="Invernadero" 
-              className="object-contain rounded-t-lg" 
-            />
-            <div className="p-6 text-center">
-              <Link 
-                to="/PanelZona3" 
-                className="inline-block bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700"
-              >
-                Invernadero 3
-              </Link>
-            </div>
-          </div>
-
-          
-          <div className="max-w-sm w-full bg-white rounded-lg shadow-lg">
-            <img 
-              src={Invernaderoi} 
-              alt="Invernadero" 
-              className="object-contain rounded-t-lg" 
-            />
-            <div className="p-6 text-center">
-              <Link 
-                to="/PanelZona4" 
-                className="inline-block bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-700"
-              >
-                Invernadero 4
-              </Link>
-            </div>
-          </div>
-
+          ))}
         </div>
 
-        
-        <div className="flex justify-center mt-6">
-          <button className="bg-green-500 text-white py-2 px-5 rounded-md w-1/2 hover:bg-green-600 absolute top-200">
-            Agregar Invernadero
+        {/* Botón de Agregar Invernadero */}
+        <div className="mt-10">
+          <button className="bg-green-500 text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition">
+            + Agregar Invernadero
           </button>
         </div>
-        
       </main>
-      <footer></footer>
     </>
   );
 }

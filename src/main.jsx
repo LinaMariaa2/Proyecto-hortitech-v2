@@ -4,11 +4,12 @@ import './index.css'
 import App from './App.jsx'
 
 import PanelInvA from './vistas/administrador/PanelInvA.jsx'
+import PanelZonasA from './vistas/administrador/PanelZonasA.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
-    <PanelInvA />
+    
+    <PanelZonasA />
 
 
 
