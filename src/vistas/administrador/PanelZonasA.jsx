@@ -1,7 +1,7 @@
 import React from 'react'
 import PanelZonas from '../../componentes/administrador/PanelZonas'
 
-export default function PanelZonasA() {
+export default function PanelZona1A() {
   return (
     <>
         <PanelZonas/>

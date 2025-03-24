@@ -9,7 +9,7 @@ import PanelZonasA from './vistas/administrador/PanelZonasA.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     
-    <PanelZonasA />
+    <App />
 
 
 
