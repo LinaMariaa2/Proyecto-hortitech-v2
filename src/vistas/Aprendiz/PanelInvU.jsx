@@ -1,10 +1,10 @@
 import React from 'react'
-import PanelInvernadero from '../../componentes/administrador/PanelInvernadero'
+import PanelInvernaderoU from '../../componentes/Aprendiz/PanelInvernaderoU'
 
-export default function PanelInvA() {
+export default function PanelInvU() {
   return (
     <>
-        <PanelInvernadero />
+        <PanelInvernaderoU />
         
     </>
     
