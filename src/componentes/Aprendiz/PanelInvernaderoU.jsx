@@ -23,7 +23,7 @@ function PanelInvernaderoU() {
             <div className="p-4 text-center">
               <h3 className="text-lg font-semibold text-gray-700 mb-2">{inv.nombre}</h3>
               <Link
-                to={`/panelzona/${inv.id}`}
+                to={`/PanelZonassU/${inv.id}`}
                 className="inline-block bg-green-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-green-700 transition"
               >
                 Ver Zonas

@@ -5,7 +5,6 @@ export default function PanelInvU() {
   return (
     <>
         <PanelInvernaderoU />
-        
     </>
     
   )

@@ -5,8 +5,8 @@ function AgregarZona({ onAgregar, onClose }) {
     nombre: "",
     tipoCultivo: "",
     descripcion: "",
-    tipoRiego: "",
-    tipoIluminacion: "",
+    tipoRiego: "Goteo", // Valor por defecto
+    tipoIluminacion: "LED", 
     ultimaActivacion: "",
   });
 
@@ -22,7 +22,7 @@ function AgregarZona({ onAgregar, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-100 bg-opacity-50 z-50">
       <div className="bg-white p-6 rounded-lg shadow-xl w-96">
         <h2 className="text-xl font-semibold mb-4">Agregar Nueva Zona</h2>
         <form onSubmit={handleSubmit}>
@@ -42,6 +42,7 @@ function AgregarZona({ onAgregar, onClose }) {
             onChange={handleChange}
             required
           />
+          
           <input
             type="text"
             name="descripcion"
@@ -49,29 +50,32 @@ function AgregarZona({ onAgregar, onClose }) {
             className="w-full border p-2 mb-2"
             onChange={handleChange}
           />
+
+          {/* Tipo de Riego (Enum) */}
+          <label className="block mb-1 font-semibold">Tipo de Riego</label>
+          <select name="tipoRiego" className="w-full border p-2 mb-2" value={zona.tipoRiego} onChange={handleChange}>
+            <option value="Goteo">Goteo</option>
+            <option value="Aspersión">Aspersión</option>
+          </select>
+
+          {/* Tipo de Iluminación (Enum) */}
+          <label className="block mb-1 font-semibold">Tipo de Iluminación</label>
+          <select name="tipoIluminacion" className="w-full border p-2 mb-2" value={zona.tipoIluminacion} onChange={handleChange}>
+            <option value="LED">LED</option>
+            <option value="Sodio">Sodio</option>
+            </select>
+
+          {/* Última Activación (Fecha y Hora) */}
+          <label className="block mb-1 font-semibold">Última Activación</label>
           <input
-            type="text"
-            name="tipoRiego"
-            placeholder="Tipo de Riego"
-            className="w-full border p-2 mb-2"
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="tipoIluminacion"
-            placeholder="Tipo de Iluminación"
-            className="w-full border p-2 mb-2"
-            onChange={handleChange}
-          />
-          <input
-            type="text"
+            type="datetime-local"
             name="ultimaActivacion"
-            placeholder="Última Activación"
             className="w-full border p-2 mb-2"
             onChange={handleChange}
           />
-          <div className="flex justify-end">
-            <button type="button" onClick={onClose} className="bg-red-500 text-white px-3 py-2 rounded-md mr-2">
+
+          <div className="flex justify-between mt-4">
+            <button type="button" onClick={onClose} className="bg-red-500 text-white px-3 py-2 rounded-md">
               Cancelar
             </button>
             <button type="submit" className="bg-green-500 text-white px-3 py-2 rounded-md">
