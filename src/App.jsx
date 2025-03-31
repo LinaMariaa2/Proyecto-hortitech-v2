@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
+
 //Home
 import Home from './vistas/usuarios-home/home.jsx';
 import InicioSesion from './vistas/usuarios-home/InicioSesion.jsx';
