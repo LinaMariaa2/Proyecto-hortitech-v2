@@ -14,6 +14,18 @@ import PanelZonasA from "./vistas/administrador/PanelZonasA";
 import PanelInvU from "./vistas/Aprendiz/PanelInvU";
 import PanelZonasU from "./vistas/Aprendiz/PanelZonasU";
 
+//Menu
+import Menu from './vistas/Menu';
+import Estadisticas from './componentes/usuario/Estadisticas';
+import Agenda from './componentes/usuario/Agenda';
+import Visualizacion from './componentes/usuario/Visualizacion';
+import Configuracion from './componentes/usuario/Configuracion';
+import Programacion from './componentes/usuario/Programacion';
+import './App.css';
+import Riego from './componentes/usuario/Riego';
+import Iluminacion from './componentes/Iluminacion';
+import Temperatura from './componentes/Temperatura';
+
 const App = () => {
   return (
     <Router>
@@ -31,15 +43,27 @@ const App = () => {
         <Route path="/PanelInvU" element={<PanelInvU />} />
         <Route path="/PanelZonassU/:id" element={<PanelZonasU />} />
       
-        {/*  */}
+        {/* Menu */}
+        <Route path="Menu" element={<Menu />}></Route>
+        <Route path="Estadisticas" element={<Estadisticas />} />
+        <Route path="Agenda" element={<Agenda />} />
+        <Route path="Visualizacion" element={<Visualizacion />} />
+        <Route path="Configuracion" element={<Configuracion />} />
+        <Route path="Programacion" element={<Programacion />} />
+        <Route path="Riego" element={<Riego />} />
+        <Route path="iluminacion" element={<Iluminacion />} />
+        <Route path="temperatura" element={<Temperatura />} />
 
+        {/* Menu */}
+
+        
       </Routes>
     </Router>
   );
 };
 
 
-
-
-
 export default App;
+
+
+
