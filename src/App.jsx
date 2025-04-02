@@ -5,6 +5,7 @@ import Estadisticas from './componentes/usuario/Estadisticas';
 import Agenda from './componentes/usuario/Agenda';
 import Visualizacion from './componentes/usuario/Visualizacion';
 import Configuracion from './componentes/usuario/Configuracion';
+import Invernadero from './componentes/usuario/Invernadero';
 import Programacion from './componentes/usuario/Programacion';
 import './App.css';
 import Riego from './componentes/usuario/Riego';
@@ -25,6 +26,7 @@ function App() {
             <Route path="Riego" element={<Riego />} />
             <Route path="iluminacion" element={<Iluminacion />} />
             <Route path="temperatura" element={<Temperatura />} />
+            <Route path="invernadero" element={<Invernadero />} />
           </Route>
         </Routes>
       </BrowserRouter>
