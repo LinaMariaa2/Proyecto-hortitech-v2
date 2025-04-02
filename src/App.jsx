@@ -39,13 +39,15 @@ import Temperatura from './componentes/Temperatura';
 
 
 //Configuraciones
-
+import ConfigAprendiz from "./vistas/configuraciones/ConfigAprendiz";
+import ConfigAdmin from "./vistas/configuraciones/ConfigAdmin";
 
 
 const App = () => {
   return (
     <Router>
       <Routes>
+
         
         {/* HOME */}
         <Route path="/" element={<Home />} /> 
@@ -68,7 +70,7 @@ const App = () => {
         <Route path="/BlocU" element={<BlocU />} />
       
         {/* BARRA NAVEGACION */}
-        <Route path="/Menu" element={<Menu />}>
+        <Route path="/Menu" element={<Menu />}/>
         <Route path="Estadisticas" element={<Estadisticas />} />
         <Route path="Agenda" element={<Agenda />} />
         <Route path="Visualizacion" element={<Visualizacion />} />
@@ -78,16 +80,15 @@ const App = () => {
         <Route path="iluminacion" element={<Iluminacion />} />
         <Route path="temperatura" element={<Temperatura />} />
         <Route path="invernadero" element={<Invernadero />} />
-        </Route>
+       
 
         {/* MENU ESTAT*/}
 
 
         {/* CONFIGURACIONES */}
-
+        <Route path="/Aprendiz" element={<ConfigAprendiz/>} />
+        <Route path="/Administrador" element={<ConfigAdmin/>} /> 
         
-
-       
 
       </Routes>
     </Router>
