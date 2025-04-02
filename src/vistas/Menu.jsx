@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import computadora from '../componentes/imagenes/computadora.png';
 import estadisticas from '../componentes/imagenes/estadistic.png';
 import bloc from '../componentes/imagenes/bloc.png';
+import flor from '../componentes/imagenes/flor.png'
 import configuracion from '../componentes/imagenes/configuracion.png';
 import camara from '../componentes/imagenes/camara.png';
 import perfil from '../componentes/imagenes/perfil.png';
@@ -99,6 +100,16 @@ export default function Menu() {
               >
                 <img src={configuracion} alt="" className="w-8 h-8 mr-2 rounded-full" />
                 Configuracion
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/invernadero"
+                className="block hover:bg-green-50 hover:text-green-600 p-3 rounded-md transition-colors duration-200 flex items-center"
+                onClick={() => setMenuOpen(false)}
+              >
+                <img src={flor} alt="" className="w-8 h-8 mr-2 rounded-full" />
+                Invernadero
               </Link>
             </li>
           </ul>

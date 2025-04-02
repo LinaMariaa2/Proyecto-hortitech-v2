@@ -10,7 +10,7 @@ export default function Temperatura() {
       <div className="rounded-lg p-6 shadow-md">
         <div className="flex items-center mb-4">
           <FaThermometerHalf className="text-yellow-500 text-5xl mr-6" />
-          <h3 className="text-xl font-semibold text-gray-700">Tempersatura </h3>
+          <h3 className="text-xl font-semibold text-gray-700">Temperatura </h3>
         </div>
         <p className="text-2xl font-bold text-gray-600">24  Grados Centigrados</p>
         <p className="text-gray-600 mt-2">Promedio semanal de temperatura en Grados Centigrados</p>
@@ -19,7 +19,7 @@ export default function Temperatura() {
        <div className="rounded-lg p-6 shadow-md"> 
           <div className="flex items-center mb-4">
             <FaLayerGroup className="text-blue-500 text-5xl mr-6" />
-            <h3 className="text-xl font-semibold text-blaa¿ck-700">Humedas del Suelo.</h3>
+            <h3 className="text-xl font-semibold text-blaa¿ck-700">Humedad del Suelo.</h3>
             </div>
             <p className="text-2xl font-bold text-black-600">60%</p>
             <p className="text-600 mt-2">Promedio semanal de humedad del suelo</p>

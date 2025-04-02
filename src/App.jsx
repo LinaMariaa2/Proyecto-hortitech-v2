@@ -27,11 +27,13 @@ import Estadisticas from './componentes/usuario/Estadisticas';
 import Agenda from './componentes/usuario/Agenda';
 import Visualizacion from './componentes/usuario/Visualizacion';
 import Configuracion from './componentes/usuario/Configuracion';
+import Invernadero from './componentes/usuario/Invernadero';
 import Programacion from './componentes/usuario/Programacion';
 import './App.css';
 import Riego from './componentes/usuario/Riego';
 import Iluminacion from './componentes/Iluminacion';
 import Temperatura from './componentes/Temperatura';
+
 
 //Menu Est
 
@@ -66,7 +68,7 @@ const App = () => {
         <Route path="/BlocU" element={<BlocU />} />
       
         {/* BARRA NAVEGACION */}
-        <Route path="Menu" element={<Menu />}></Route>
+        <Route path="/Menu" element={<Menu />}>
         <Route path="Estadisticas" element={<Estadisticas />} />
         <Route path="Agenda" element={<Agenda />} />
         <Route path="Visualizacion" element={<Visualizacion />} />
@@ -75,6 +77,8 @@ const App = () => {
         <Route path="Riego" element={<Riego />} />
         <Route path="iluminacion" element={<Iluminacion />} />
         <Route path="temperatura" element={<Temperatura />} />
+        <Route path="invernadero" element={<Invernadero />} />
+        </Route>
 
         {/* MENU ESTAT*/}
 
@@ -94,4 +98,7 @@ const App = () => {
 export default App;
 
 
+
+          
+        
 
