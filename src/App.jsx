@@ -8,13 +8,20 @@ import Reco from './vistas/usuarios-home/reco.jsx';
 import Reccontraseña from './vistas/usuarios-home/Reccontraseña.jsx';
 import SolicitarInformacion from './vistas/usuarios-home/SolicitarInformacion.jsx';
 
+//Programacion
+
+
 // Inv
 import PanelInvA from "./vistas/administrador/PanelInvA";
 import PanelZonasA from "./vistas/administrador/PanelZonasA";
 import PanelInvU from "./vistas/Aprendiz/PanelInvU";
 import PanelZonasU from "./vistas/Aprendiz/PanelZonasU";
 
-//Menu
+//Bloc
+import BlocU from "./vistas/Aprendiz/BlocU";
+import BlocA from "./vistas/administrador/BlocA";
+
+//Barra Navegacion
 import Menu from './vistas/Menu';
 import Estadisticas from './componentes/usuario/Estadisticas';
 import Agenda from './componentes/usuario/Agenda';
@@ -26,10 +33,18 @@ import Riego from './componentes/usuario/Riego';
 import Iluminacion from './componentes/Iluminacion';
 import Temperatura from './componentes/Temperatura';
 
+//Menu Est
+
+
+//Configuraciones
+
+
+
 const App = () => {
   return (
     <Router>
       <Routes>
+        
         {/* HOME */}
         <Route path="/" element={<Home />} /> 
         <Route path='Login' element={<InicioSesion/>}/>
@@ -37,13 +52,20 @@ const App = () => {
         <Route path='password'element={<Reccontraseña/>}/>
         <Route path='solicitarInformacion' element={<SolicitarInformacion/>}/>
 
+        {/* PROGRAMACION */}
+
+
         {/* INV */}
         <Route path="/panelInvA" element={<PanelInvA />} />
         <Route path="/panelzona/:id" element={<PanelZonasA />} />
         <Route path="/PanelInvU" element={<PanelInvU />} />
         <Route path="/PanelZonassU/:id" element={<PanelZonasU />} />
+        
+        {/* BLOC */}
+        <Route path="/BlocA" element={<BlocA />} />
+        <Route path="/BlocU" element={<BlocU />} />
       
-        {/* Menu */}
+        {/* BARRA NAVEGACION */}
         <Route path="Menu" element={<Menu />}></Route>
         <Route path="Estadisticas" element={<Estadisticas />} />
         <Route path="Agenda" element={<Agenda />} />
@@ -54,9 +76,15 @@ const App = () => {
         <Route path="iluminacion" element={<Iluminacion />} />
         <Route path="temperatura" element={<Temperatura />} />
 
-        {/* Menu */}
+        {/* MENU ESTAT*/}
+
+
+        {/* CONFIGURACIONES */}
 
         
+
+       
+
       </Routes>
     </Router>
   );
