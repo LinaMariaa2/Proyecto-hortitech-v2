@@ -3,6 +3,8 @@ import PanelInvA from "./vistas/administrador/PanelInvA";
 import PanelZonasA from "./vistas/administrador/PanelZonasA";
 import PanelInvU from "./vistas/Aprendiz/PanelInvU";
 import PanelZonasU from "./vistas/Aprendiz/PanelZonasU";
+import BlocU from "./vistas/Aprendiz/BlocU";
+import BlocA from "./vistas/administrador/BlocA";
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
 
         <Route path="/PanelInvU" element={<PanelInvU />} />
         <Route path="/PanelZonassU/:id" element={<PanelZonasU />} />
+
+        <Route path="/BlocA" element={<BlocA />} />
+        <Route path="/BlocU" element={<BlocU />} />
       </Routes>
     </BrowserRouter>
   );
