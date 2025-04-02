@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Invernaderoi from "../../imagenes/Invernadero.jpg";
 import AgregarInvernadero from "./AgregarInvernadero"; // Importamos el modal
 
+
 function PanelInvernadero() {
   const [invernaderos, setInvernaderos] = useState([
     { id: 1, nombre: "Invernadero 1" },
@@ -20,6 +21,7 @@ function PanelInvernadero() {
   
   
   return (
+   
     <main className="bg-gray-100 min-h-screen flex flex-col items-center py-10">
       <h1 className="text-2xl font-bold text-gray-800 mb-6">Invernaderos</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-6">
@@ -51,6 +53,7 @@ function PanelInvernadero() {
         />
       )}
     </main>
+    
   );
 }
 
