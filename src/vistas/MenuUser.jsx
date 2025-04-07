@@ -9,7 +9,7 @@ import perfil from '../componentes/imagenes/perfil.png';
 import { FaBars } from 'react-icons/fa';
 import { Link, Outlet } from 'react-router-dom';
 
-export default function Menu() {
+export default function MenuUser() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [PerfilOpen, setPerfilOpen] = useState(false);
 
@@ -74,7 +74,7 @@ export default function Menu() {
             </li>
             <li>
               <Link
-                to="/BlocA"
+                to="/Agenda"
                 className="block hover:bg-green-50 hover:text-green-600 p-3 rounded-md transition-colors duration-200 flex items-center"
                 onClick={() => setMenuOpen(false)}
               >
@@ -94,7 +94,7 @@ export default function Menu() {
             </li>
             <li>
               <Link
-                to="/ConfigAdmin"
+                to="/Configuracion"
                 className="block hover:bg-green-50 hover:text-green-600 p-3 rounded-md transition-colors duration-200 flex items-center"
                 onClick={() => setMenuOpen(false)}
               >
@@ -104,7 +104,7 @@ export default function Menu() {
             </li>
             <li>
               <Link
-                to="/PanelInvA"
+                to="/invernadero"
                 className="block hover:bg-green-50 hover:text-green-600 p-3 rounded-md transition-colors duration-200 flex items-center"
                 onClick={() => setMenuOpen(false)}
               >
@@ -158,3 +158,4 @@ export default function Menu() {
     </>
   );
 }
+
