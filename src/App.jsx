@@ -13,6 +13,8 @@ import PanelInvA from "./vistas/administrador/PanelInvA";
 import PanelZonasA from "./vistas/administrador/PanelZonasA";
 import PanelInvU from "./vistas/Aprendiz/PanelInvU";
 import PanelZonasU from "./vistas/Aprendiz/PanelZonasU";
+import Programacion from './vistas/administrador/Programacion.jsx';
+import Menu from './vistas/Menu.jsx';
 
 const App = () => {
   return (
@@ -32,6 +34,10 @@ const App = () => {
         <Route path="/PanelZonassU/:id" element={<PanelZonasU />} />
       
         {/*  */}
+
+        
+
+
 
       </Routes>
     </Router>
