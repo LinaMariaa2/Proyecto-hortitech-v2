@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Invernaderoi from "../../imagenes/Invernadero.jpg"; // Imagen de invernadero
+import Invernaderoi from "../../imgenP/Invernadero.jpg"; // Imagen de invernadero
 
 const invernaderos = [
   { id: 1, nombre: "Invernadero 1" },

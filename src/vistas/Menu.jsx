@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import computadora from '../componentes/imagenes/computadora.png';
 import estadisticas from '../componentes/imagenes/estadistic.png';
 import bloc from '../componentes/imagenes/bloc.png';
-import flor from '../componentes/imagenes/flor.png'
+import flor from '../componentes/imagenes/flor.png';
 import configuracion from '../componentes/imagenes/configuracion.png';
-import camara from '../componentes/imagenes/camara.png';
 import perfil from '../componentes/imagenes/perfil.png';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link, Outlet } from 'react-router-dom';
 
 export default function Menu() {
@@ -21,23 +20,40 @@ export default function Menu() {
     setPerfilOpen(!PerfilOpen);
   };
 
+  const closePerfil = () => {
+    setPerfilOpen(false);
+  };
+
   const PerfilContent = () => {
     return (
-      <div className="bg-white p-4 rounded-lg shadow-md mt-2 absolute top-16 right-0 w-80">
-        <div className="flex flex-col items-center mb-4">
-          <img src={perfil} alt="Foto de perfil" className="w-16 h-16 rounded-full mr-4" />
-          <div>
-            <p className="text-lg font-semibold text-gray-600">¡Hola, Horti-Tech!</p>
-            <p className="text-sm text-gray-600">Horti-Tech@ejemplo.com</p>
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="bg-white p-6 rounded-lg shadow-lg relative w-96">
+          <button onClick={closePerfil} className="absolute top-2 right-2 text-gray-600 hover:text-red-600">
+            <FaTimes size={20} />
+          </button>
+          <div className="flex flex-col items-center mb-4">
+            <img src={perfil} alt="Foto de perfil" className="w-16 h-16 rounded-full mb-2" />
+            <div className="text-center">
+              <p className="text-lg font-semibold text-gray-600">¡Hola, Horti-Tech!</p>
+              <p className="text-sm text-gray-600">Horti-Tech@ejemplo.com</p>
+            </div>
           </div>
-        </div>
-        <div className="flex justify-around items-center aline">
-          <button className="bg-gradient-to-r from-gray-300 to-green-700 text-white font-bold py1 px-4 rounded">
-            Configuración
-          </button>
-          <button className="bg-gradient-to-r from-gray-300 to-green-700 text-white font-bold py1 px-4 rounded">
-            Salir
-          </button>
+          <div className="flex justify-around">
+            <Link
+              to="/MenuA/ConfigAdmin"
+              onClick={closePerfil}
+              className="bg-green-600 text-white font-bold py-1 px-4 rounded"
+            >
+              Configuración
+            </Link>
+            <Link
+              to="/"
+              onClick={closePerfil}
+              className="bg-red-500 text-white font-bold py-1 px-4 rounded"
+            >
+              Salir
+            </Link>
+          </div>
         </div>
       </div>
     );
@@ -46,7 +62,7 @@ export default function Menu() {
   const MenuDesplegable = ({ setMenuOpen }) => {
     return (
       <aside
-        className={`w-64 bg-white p-4 rounded-lg shadow-md mt-4 ml-4 transition-transform duration-300 transform fixed top-20 left-0 h-screen z-10 ${
+        className={`w-64 bg-green-100 p-4 rounded-lg shadow-md mt-4 ml-4 transition-transform duration-300 transform h-screen z-10 ${
           menuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -54,27 +70,27 @@ export default function Menu() {
           <ul className="space-y-2">
             <li>
               <Link
-                to="/Programacion"
+                to="/MenuA/ProgramacionA"
                 className="block hover:bg-green-50 hover:text-green-600 p-3 rounded-md transition-colors duration-200 flex items-center"
                 onClick={() => setMenuOpen(false)}
               >
                 <img src={computadora} alt="" className="w-8 h-8 mr-2 rounded-full" />
-                Programacion
+                Programación
               </Link>
             </li>
             <li>
               <Link
-                to="/Estadisticas"
+                to="/MenuA/Estadisticas"
                 className="block hover:bg-green-50 hover:text-green-600 p-3 rounded-md transition-colors duration-200 flex items-center"
                 onClick={() => setMenuOpen(false)}
               >
                 <img src={estadisticas} alt="" className="w-8 h-8 mr-2 rounded-full" />
-                Estadisticas
+                Estadísticas
               </Link>
             </li>
             <li>
               <Link
-                to="/BlocA"
+                to="/MenuA/BlocA"
                 className="block hover:bg-green-50 hover:text-green-600 p-3 rounded-md transition-colors duration-200 flex items-center"
                 onClick={() => setMenuOpen(false)}
               >
@@ -84,27 +100,17 @@ export default function Menu() {
             </li>
             <li>
               <Link
-                to="/Visualizacion"
-                className="block hover:bg-green-50 hover:text-green-600 p-3 rounded-md transition-colors duration-200 flex items-center"
-                onClick={() => setMenuOpen(false)}
-              >
-                <img src={camara} alt="" className="w-8 h-8 mr-2 rounded-full" />
-                Visualizacion
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/ConfigAdmin"
+                to="/MenuA/ConfigAdmin"
                 className="block hover:bg-green-50 hover:text-green-600 p-3 rounded-md transition-colors duration-200 flex items-center"
                 onClick={() => setMenuOpen(false)}
               >
                 <img src={configuracion} alt="" className="w-8 h-8 mr-2 rounded-full" />
-                Configuracion
+                Configuración
               </Link>
             </li>
             <li>
               <Link
-                to="/PanelInvA"
+                to="/MenuA/PanelInvA"
                 className="block hover:bg-green-50 hover:text-green-600 p-3 rounded-md transition-colors duration-200 flex items-center"
                 onClick={() => setMenuOpen(false)}
               >
@@ -119,42 +125,40 @@ export default function Menu() {
   };
 
   return (
-    <>
-      <div className="min-h-screen flex flex-col">
-        {/* Header */}
-        <header className="bg-gradient-to-r from-gray-400 to-green-600 text-white p-6 shadow-md">
-          <div className="container mx-auto flex justify-between items-center pl-0 relative">
-            <button onClick={toggleMenu} className="focus:outline-none mr-0 ml-0 pl-0">
-              <FaBars className="h-8 w-8" />
-            </button>
-            <div className="flex items-center justify-center flex-1">
-              <h1 className="text-5xl font-serif font-bold tracking-wide">HortiTech</h1>
-            </div>
-            <div className="w-6 h-6"></div>
-            <button onClick={Perfil} className="focus:outline-none mr-0 ml-0 pl-0">
-              <img src={perfil} alt="Perfil" className="w-12 h-12 rounded-full" />
-            </button>
-            {PerfilOpen && <PerfilContent />}
+    <div className="min-h-screen flex flex-col">
+      {/* Header */}
+      <header className="bg-green-50 text-green-900 p-6 shadow-md">
+        <div className="container mx-auto flex justify-between items-center relative">
+          <button onClick={toggleMenu} className="focus:outline-none">
+            <FaBars className="h-8 w-8" />
+          </button>
+          <div className="flex items-center justify-center flex-1">
+            <h1 className="text-4xl font-serif font-bold tracking-wide">HortiTech</h1>
           </div>
-        </header>
+          <div className="w-6 h-6"></div>
+          <button onClick={Perfil} className="focus:outline-none">
+            <img src={perfil} alt="Perfil" className="w-12 h-12 rounded-full" />
+          </button>
+        </div>
+      </header>
 
-        {/* Main */}
-        <main className="flex flex-1 bg-gray-100">
-          {menuOpen && <MenuDesplegable setMenuOpen={setMenuOpen} />}
-          <div className="flex-1">
-            <Outlet />
-          </div>
-        </main>
+      {/* Main */}
+      <main className="flex flex-1 bg-gray-100">
+        {menuOpen && <MenuDesplegable setMenuOpen={setMenuOpen} />}
+        <div className="flex-1">
+          <Outlet />
+        </div>
+      </main>
 
-        {/* Footer */}
-        <footer className="bg-gray-800 text-white text-center p-6 mt-8 shadow-md">
-          <div className="container mx-auto">
-            <p className="text-sm">
-              &copy; {new Date().getFullYear()} HortiTech. Todos los derechos reservados.
-            </p>
-          </div>
-        </footer>
-      </div>
-    </>
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white text-center p-6 mt-8 shadow-md">
+        <div className="container mx-auto">
+          <p className="text-sm">&copy; {new Date().getFullYear()} HortiTech. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+
+      {/* Modal de perfil */}
+      {PerfilOpen && <PerfilContent />}
+    </div>
   );
 }

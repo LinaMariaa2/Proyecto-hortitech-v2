@@ -5,7 +5,7 @@ import puntos from '../imagenes/puntos.jpg'
 import { Link } from 'react-router-dom';
 
 
-export default function Estadisticas() {
+export default function EstadisticaU() {
   return (
     <>
  <section className="flex flex-col md:flex-row">
@@ -13,7 +13,7 @@ export default function Estadisticas() {
 
   <div className="flex flex-col sm:flex-row justify-around items-stretch h-full space-y-4 sm:space-x-2">
       <div className="flex flex-col sm:flex-row justify-around items-stretch h-full space-y-4 sm:space-x-2">
-          <Link to="/MenuA/Estadisticas/riego" className="transition-transform transform-gpu hover:scale-105 hover:shadow-lg flex flex-col items-center justify-center">
+          <Link to="/MenuU/EstadisticasU/riego" className="transition-transform transform-gpu hover:scale-105 hover:shadow-lg flex flex-col items-center justify-center">
             <div className="w-full sm:w-50 h-50 sm:h-50 p-5 flex items-center justify-center">
               <img src={flecha} alt="Imagen 1" className="w-full h-full object-cover" />
             </div>
@@ -30,7 +30,7 @@ export default function Estadisticas() {
 
     
       <div className="flex flex-col sm:flex-row justify-around items-stretch h-full space-y-4 sm:space-x-2">
-          <Link to="/MenuA/Estadisticas/iluminacion" className="transition-transform transform-gpu hover:scale-105 hover:shadow-lg flex flex-col items-center justify-center">
+          <Link to="/MenuU/EstadisticasU/iluminacion" className="transition-transform transform-gpu hover:scale-105 hover:shadow-lg flex flex-col items-center justify-center">
             <div className="w-full sm:w-50 h-50 sm:h-50 p-5 flex items-center justify-center">
               <img src={imgEsta} alt="Imagen 1" className="w-full h-full object-cover" />
             </div>
@@ -48,7 +48,7 @@ export default function Estadisticas() {
 
 
      <div className="flex flex-col sm:flex-row justify-around items-stretch h-full space-y-4 sm:space-x-2">
-          <Link to="/MenuA/Estadisticas/consumo" className="transition-transform transform-gpu hover:scale-105 hover:shadow-lg flex flex-col items-center justify-center">
+          <Link to="/MenuU/EstadisticasU/consumo" className="transition-transform transform-gpu hover:scale-105 hover:shadow-lg flex flex-col items-center justify-center">
             <div className="w-full sm:w-50 h-50 sm:h-50 p-5 flex items-center justify-center">
               <img src={puntos} alt="Imagen 1" className="w-full h-full object-cover" />
             </div>
