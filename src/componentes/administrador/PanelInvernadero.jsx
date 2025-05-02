@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Invernaderoi from "../../imgenP/Invernadero.jpg";
+import AgregarInvernadero from "../../componentes/administrador/AgregarInvernadero";
 
 function PanelInvernadero() {
-  const [invernaderos] = useState([
+  const [invernaderos, setInvernaderos] = useState([
     { id: 1, nombre: "Invernadero 1" },
     { id: 2, nombre: "Invernadero 2" },
     { id: 3, nombre: "Invernadero 3" },
     { id: 4, nombre: "Invernadero 4" },
   ]);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const agregarNuevo = (nuevo) => {
+    setInvernaderos([...invernaderos, { ...nuevo, id: Date.now() }]);
+  };
 
   return (
-    <main className="bg-gray-100 min-h-screen flex flex-col items-center py-10">
+    <main className="bg-gray-100 min-h-screen flex flex-col items-center py-1">
       <h1 className="text-2xl font-bold text-gray-800 mb-6">Invernaderos</h1>
 
-      {/* Lista de invernaderos */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-6">
         {invernaderos.map((inv) => (
           <div
@@ -41,15 +46,22 @@ function PanelInvernadero() {
         ))}
       </div>
 
-      {/* Botón que redirige a la ruta de creación */}
       <div className="mt-10">
-        <Link
-          to="/MenuA/PanelInvA/agregarInvernadero"
+        <button
+          onClick={() => setModalOpen(true)}
           className="bg-green-500 text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-600 transition"
         >
           Crear Invernadero
-        </Link>
+        </button>
       </div>
+
+      {modalOpen && (
+        <AgregarInvernadero
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+          onAgregar={agregarNuevo}
+        />
+      )}
     </main>
   );
 }

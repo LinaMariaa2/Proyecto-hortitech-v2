@@ -56,7 +56,7 @@ function PanelZonas() {
     },
   };
 
-  const invernadero = invernaderosBase[id] || { nombre: "Desconocido", zonas: [] };
+  const invernadero = invernaderosBase[parseInt(id)] || { nombre: "Desconocido", zonas: [] };
   const [zonas, setZonas] = useState([...invernadero.zonas]);
   const [menuAbierto, setMenuAbierto] = useState(null);
   const [mostrarFormulario, setMostrarFormulario] = useState(false);

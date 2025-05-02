@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import { BrowserRouter, Routes, Route, Router } from 'react-router-dom';
 import './App.css';
 
@@ -58,7 +57,7 @@ function App() {
             <Route path="Estadisticas/iluminacion" element={<Iluminacion />} />
             <Route path="Estadisticas/consumo" element={<Temperatura />} />
             <Route path="PanelInvA" element={<PanelInvA />} />
-            <Route path="PanelInvA/panelZonasA/:idInvernadero" element={<PanelZonasA />} />
+            <Route path="PanelInvA/panelZonasA/:id" element={<PanelZonasA />} />
             <Route path="PanelInvA/agregarInvernadero" element={<AgregarInvernadero/>} />
             <Route path="PanelInvA/panelZonasA" element={<AgregarZona />} />
           </Route>
@@ -74,9 +73,9 @@ function App() {
             <Route path="EstadisticasU/iluminacion" element={<Iluminacion />} />
             <Route path="EstadisticasU/consumo" element={<Temperatura />} />
             <Route path="PanelInvU" element={<PanelInvU />} />
-            <Route path="PanelInvU/panelZonasU/:idInvernadero" element={<PanelZonasU/>} />
-          </Route>
-   </Routes>
+            <Route path="PanelInvU/panelZonasU/:id" element={<PanelZonasU/>} />
+          </Route>  
+   </Routes> 
 </BrowserRouter>
 )};
 
