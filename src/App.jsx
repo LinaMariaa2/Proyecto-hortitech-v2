@@ -7,7 +7,7 @@ import Home from './vistas/usuarios-home/temp.jsx';
 import InicioSesion from './vistas/usuarios-home/InicioSesion.jsx';
 import Reco from './vistas/usuarios-home/reco.jsx';
 import Reccontraseña from './vistas/usuarios-home/Reccontraseña.jsx';
-import SolicitarInformacionN from './componentes/usuarios-home/SolicitarInformacioN.jsx';
+import SolicitarInformacion from './vistas/usuarios-home/SolicitarInformacion.jsx';
 import SeleccionRol from './vistas/usuarios-home/SeleccionRol.jsx';
 
 // Administración
@@ -43,7 +43,7 @@ function App() {
          <Route path="/login" element={<InicioSesion />} />
          <Route path="/registro" element={<Reco />} />
          <Route path="/password" element={<Reccontraseña />} />
-         <Route path="/solicitarInformacion" element={<SolicitarInformacionN />} />
+         <Route path="/solicitarInformacion" element={<SolicitarInformacion />} />
          <Route path="/seleccionRol" element={<SeleccionRol />} /> 
 
         {/* Rutas Admin */}
