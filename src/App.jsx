@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Router } from 'react-router-dom';
 import './App.css';
 
 // Home
-import Home from './vistas/usuarios-home/home.jsx';
+import Home from './vistas/usuarios-home/Home.jsx';
 import InicioSesion from './vistas/usuarios-home/InicioSesion.jsx';
 import Reco from './vistas/usuarios-home/reco.jsx';
 import Reccontraseña from './vistas/usuarios-home/Reccontraseña.jsx';
