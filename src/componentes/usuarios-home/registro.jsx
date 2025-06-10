@@ -6,7 +6,7 @@ function Registro() {
     nombre: '',
     correo: '',
     contrasenia: '',
-    rol: ''
+    
   });
 
   const handleChange = (e) => {
@@ -59,17 +59,7 @@ function Registro() {
             className="border border-green-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-400"
             required
           />
-          <select
-            name="rol"
-            value={form.rol}
-            onChange={handleChange}
-            className="border border-green-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-400"
-            required
-          >
-            <option value="" disabled>Selecciona tu rol</option>
-            <option value="estudiante">Estudiante</option>
-            <option value="administrador">Administrador</option>
-          </select>
+          
           <button
             type="submit"
             className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition"
