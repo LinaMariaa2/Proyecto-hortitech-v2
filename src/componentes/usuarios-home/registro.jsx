@@ -3,9 +3,9 @@ import axios from 'axios';
 
 function Registro() {
   const [form, setForm] = useState({
-    nombre: '',
+    nombre_usuario: '',
     correo: '',
-    contrasenia: '',
+    contrasena: '',
     
   });
 
@@ -19,7 +19,7 @@ function Registro() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:4000/api/register', form);
+      const res = await axios.post('http://localhost:3000/api/persona/registro', form);
       alert('Usuario registrado correctamente');
       console.log(res.data);
     } catch (error) {
@@ -34,9 +34,9 @@ function Registro() {
         <form className="space-y-4" onSubmit={handleSubmit}>
           <input
             type="text"
-            name="nombre"
-            placeholder="Nombre completo"
-            value={form.nombre}
+            name="nombre_usuario"
+            placeholder="Nombre de usuario"
+            value={form.nombre_usuario}
             onChange={handleChange}
             className="border border-green-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-400"
             required
@@ -52,9 +52,9 @@ function Registro() {
           />
           <input
             type="password"
-            name="contrasenia"
+            name="contrasena"
             placeholder="Contraseña"
-            value={form.contrasenia}
+            value={form.contrasena}
             onChange={handleChange}
             className="border border-green-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-400"
             required
