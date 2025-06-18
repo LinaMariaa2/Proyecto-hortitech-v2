@@ -15,7 +15,7 @@ function Registro() {
       [e.target.name]: e.target.value
     });
   };
-
+     
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -63,13 +63,14 @@ function Registro() {
           <button
             type="submit"
             className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition"
+            
           >
             Crear Cuenta
           </button>
         </form>
         <p className="text-gray-600 mt-4">
           ¿Ya tienes cuenta?{' '}
-          <a href="/login" className="text-green-500 hover:underline">Inicia sesión aquí</a>.
+          <a href="/verificar-correo" className="text-green-500 hover:underline">reenviar el codigo</a>.
         </p>
       </div>
     </div>

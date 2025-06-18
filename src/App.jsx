@@ -9,6 +9,7 @@ import Reco from './vistas/usuarios-home/reco.jsx';
 import Reccontraseña from './vistas/usuarios-home/Reccontraseña.jsx';
 import SolicitarInformacion from './vistas/usuarios-home/SolicitarInformacion.jsx';
 import SeleccionRol from './vistas/usuarios-home/SeleccionRol.jsx';
+import VerificarCodigo from './componentes/usuarios-home/VerificarCodigo.jsx'
 
 // Administración
 import PanelInvA from "./vistas/administrador/PanelInvA.jsx";
@@ -42,6 +43,7 @@ function App() {
          <Route path="/" element={<Home />} />
          <Route path="/login" element={<InicioSesion />} />
          <Route path="/registro" element={<Reco />} />
+         <Route path="/verificar-correo" element={<VerificarCodigo />} />
          <Route path="/password" element={<Reccontraseña />} />
          <Route path="/solicitarInformacion" element={<SolicitarInformacion />} />
          <Route path="/seleccionRol" element={<SeleccionRol />} /> 

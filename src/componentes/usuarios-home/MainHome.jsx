@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const MainHome = () => {
     return (
-        <main className="flex flex-col items-center justify-center min-h-screen bg-[url('/src/imagenes/img/imagen3.jpg')] bg-cover bg-center bg-fixed">
+        <main className="flex flex-col items-center justify-center min-h-screen bg-[url('/src/imagenes/img/imagen3.jpg')] bg-cover bg-center bg-fixed px-20 py-14">
             <article className="w-full max-w-4xl bg-white/80 rounded-lg shadow-lg p-8 text-center">
 
                 <section id="about" className="mb-8">
-                    <h2 className="text-3xl font-bold text-green-700 mb-4">Acerca de Nosotros</h2>
+                    <h2 className="text-base font-semibold text-gray-500 mb-4">Prueba</h2>
                     <p className="text-gray-700">
                         HorTitech es una solución tecnológica que permite controlar de forma remota los sistemas de luz y agua. Ideal para la agricultura moderna y el manejo eficiente de recursos en edificios e industrias.
                     </p>
@@ -40,10 +40,11 @@ const MainHome = () => {
                 </section>
 
                 <section id="cta" className="mt-8">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4">¿Quieres saber más?</h2>
+                    <h2 className="text-base font-bold text-gray-800 mb-4">¿Quieres saber más?</h2>
                     <Link to="/solicitarInformacioN">
-                        <button className="bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition">
-                            Solicitar Información
+                        <button className=" text-base bg-green-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-600 shadow-md hover:shadow-lg transition duration-200 ease-in-out"
+>
+                            Prueba
                         </button>
                     </Link>
                 </section>
@@ -66,6 +67,16 @@ const MainHome = () => {
                     </div>
                 </section>
             </article>
+            <div className="bg-background text-text min-h-screen p-6">
+                <button className="bg-primary text-white px-4 py-2 rounded hover:bg-green-700">Activar riego</button>
+                <button className="bg-secondary text-white px-4 py-2 rounded ml-4 hover:bg-blue-800">Ver sensores</button>
+
+                <div className="bg-surface border border-border p-4 mt-6 rounded shadow">
+                    <h2 className="text-xl font-semibold">Estado del Invernadero</h2>
+                    <p className="text-muted">Última actualización: hace 5 min</p>
+                </div>
+            </div>
+
         </main>
     );
 };
